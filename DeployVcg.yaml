@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+
+  - import_tasks: 30-DeployVcg.yaml
+    vars:
+      vcg:
+        instanceid: vcg1
+        hostname: vcg1
+        password: Velocloud123
+        image: 'images/velocloud-vcg-3.2.0-49-R320-20180409-GA.ova'
+        portgroup: 'ls_internet'
+        eth0:
+          ipAllocationType: 'STATIC'
+          ipAddress: '20.20.20.11'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '20.20.20.1'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+  - import_tasks: 30-DeployVcg.yaml
+    vars:
+      vcg:
+        instanceid: vcg2
+        hostname: vcg2
+        password: Velocloud123
+        image: 'images/velocloud-vcg-3.2.0-49-R320-20180409-GA.ova'
+        portgroup: 'ls_internet'
+        eth0:
+          ipAllocationType: 'STATIC'
+          ipAddress: '20.20.20.12'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '20.20.20.1'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+

@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+ 
+  # Deploy VCO
+  - name: deploy_vco
+    vco_deploy_ova:
+      ovftool_path: '{{ ovftool_file_path }}'
+      ova_file: '{{ vco.image }}'
+      vcenter: '{{ VcIPAddress }}'
+      vcenter_user: '{{ VcUser }}'
+      vcenter_passwd: '{{ VcPassword }}'
+      datacenter: '{{ DataCenterName }}'
+      cluster: '{{ ClusterName }}'
+      datastore: '{{ Datastore }}'
+      portgroup: '{{ vco.portgroup }}'
+      vmname: '{{ vco.hostname }}'
+      instanceid: '{{ vco.instanceid }}'
+      hostname: '{{ vco.hostname }}'
+      password: '{{ vco.password }}'
+      publickeys: '{{ vco.publickeys }}'
+      #dns1: '{{ dns1 }}'
+      #dns2: '{{ dns2 }}'
+      eth0ipAllocationType: '{{ vco.eth0.ipAllocationType }}'
+      eth0ipAddress: '{{ vco.eth0.ipAddress }}'
+      eth0subnetMask: '{{ vco.eth0.subnetMask }}'
+      eth0gatewayAddress: '{{ vco.eth0.gatewayAddress }}'
+      userdata: "{{ lookup('template', 'templates/vco-user-data.j2') | b64encode }}"
+    register: deploy_nsx_man
+
+  # Wait for VCO  
+
+
+

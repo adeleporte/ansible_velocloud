@@ -1,0 +1,102 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+
+  # Deploy VCO OVA
+  - name: deploy_vco
+    vco_deploy_ova:
+      ovftool_path: '{{ ovftool_file_path }}'
+      ova_file: '{{ vco.image }}'
+      vcenter: '{{ VcIPAddress }}'
+      vcenter_user: '{{ VcUser }}'
+      vcenter_passwd: '{{ VcPassword }}'
+      datacenter: '{{ DataCenterName }}'
+      cluster: '{{ ClusterName }}'
+      datastore: '{{ Datastore }}'
+      portgroup: '{{ vco.portgroup }}'
+      vmname: '{{ vco.hostname }}'
+      instanceid: '{{ vco.instanceid }}'
+      hostname: '{{ vco.hostname }}'
+      password: '{{ vco.password }}'
+      publickeys: '{{ vco.publickeys }}'
+      #dns1: '{{ dns1 }}'
+      #dns2: '{{ dns2 }}'
+      eth0ipAllocationType: '{{ vco.eth0.ipAllocationType }}'
+      eth0ipAddress: '{{ vco.eth0.ipAddress }}'
+      eth0subnetMask: '{{ vco.eth0.subnetMask }}'
+      eth0gatewayAddress: '{{ vco.eth0.gatewayAddress }}'
+      userdata: "{{ lookup('template', 'templates/vco-user-data.j2') | b64encode }}"
+    register: deploy_nsx_man
+
+
+    - name: Manage Velocloud Gateways
+      no_log: true
+      gateway:
+        host: "{{ vco_ip_address }}"
+        user: "{{ vco_username }}"
+        password: "{{ vco_password }}"
+        gateway_name: "{{ item.name }}"
+        description: "{{ item }}"
+        ip_address: "{{ item.ip }}"
+        state: present
+      with_items:
+        - { name: 'vcg1', ip: '20.20.20.1' }
+        - { name: 'vcg2', ip: '20.20.20.2' }
+        - { name: 'vcg3', ip: '20.20.20.3' }
+      register: gateways
+      tags: gateways
+
+    - name: Manage Velocloud Enterprise
+      no_log: true
+      enterprise:
+        host: "{{ vco_ip_address }}"
+        user: "{{ vco_username }}"
+        password: "{{ vco_password }}"
+        enterprise_name: "Vinci"
+        state: present
+      register: enterprise
+      tags: enterprise
+
+    - debug:
+        msg: "Entreprise ID is {{ enterprise.entreprise_id }}"
+
+    - name: Manage Velocloud Profiles
+      no_log: true
+      profile:
+        host: "{{ vco_ip_address }}"
+        user: "{{ vco_username }}"
+        password: "{{ vco_password }}"
+        enterprise_id: "{{ enterprise.entreprise_id }}"
+        profile_name: "My First Profile"
+        state: present
+      register: profile
+      tags: profile
+
+    - debug:
+        msg: "Profile ID is {{ profile.profile_id }}"
+
+    - name: Manage Velocloud Edges
+      no_log: true
+      edge:
+        host: "{{ vco_ip_address }}"
+        user: "{{ vco_username }}"
+        password: "{{ vco_password }}"
+        edge_name: "{{ item.name }}"
+        description: "{{ item.name }}"
+        enterpriseId: "{{ enterprise.entreprise_id }}"
+        configurationId: "{{ profile.profile_id }}"
+        state: present
+      with_items:
+        - { name: 'vce-paris' }
+        - { name: 'vce-london' }
+        - { name: 'vce-palo' }
+        - { name: 'vce-newyork' }
+        - { name: 'vce-los-angeles' }
+      register: edge
+      tags: edges
+
+    - debug:
+        msg: "Lab is ready!!! Just connect to http://{{ vco_ip_address }}/operator"
+
+    - debug:
+        msg: "Username is {{ vco_username }} / Password is {{ vco_password }}"

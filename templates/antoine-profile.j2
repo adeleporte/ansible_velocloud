@@ -1,0 +1,2872 @@
+{
+    "_update": {
+        "name": "deviceSettings",
+        "refs": {
+            "deviceSettings:segment": [
+                {
+                    "configurationId": 34,
+                    "moduleId": 117,
+                    "ref": "deviceSettings:segment"
+                }]
+        },
+        "data": {
+            "lan": {
+                "management": {
+                    "cidrIp": "192.168.1.1", 
+                    "cidrPrefix": 32
+                }, 
+                "networks": [
+                    {
+                        "advertise": true, 
+                        "baseDhcpAddr": 13, 
+                        "cidrIp": null, 
+                        "cidrPrefix": 24, 
+                        "cost": 10, 
+                        "dhcp": {
+                            "dhcpRelay": {
+                                "enabled": false, 
+                                "servers": []
+                            }, 
+                            "enabled": true, 
+                            "leaseTimeSeconds": 86400, 
+                            "options": []
+                        }, 
+                        "disabled": false, 
+                        "interfaces": [], 
+                        "multicast": {
+                            "igmp": {
+                                "enabled": false, 
+                                "type": "IGMP_V2"
+                            }, 
+                            "igmpHostQueryIntervalSeconds": null, 
+                            "igmpMaxQueryResponse": null, 
+                            "pim": {
+                                "enabled": false, 
+                                "type": "PIM_SM"
+                            }, 
+                            "pimKeepAliveTimerSeconds": null, 
+                            "pimPruneIntervalSeconds": null
+                        }, 
+                        "name": "Corporate", 
+                        "netmask": "255.255.255.0", 
+                        "numDhcpAddr": 242, 
+                        "segmentId": 0, 
+                        "staticReserved": 10, 
+                        "vlanId": 1
+                    }
+                ], 
+                "visibility": {
+                    "mode": "MAC", 
+                    "override": false
+                }
+            }, 
+            "models": {
+                "edge1000": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE3", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE4", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE5", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE6", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE7", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE8", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "edge1000qat": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE3", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE4", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE5", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE6", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "edge500": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN3", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN4", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "broadcastSsid": true, 
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN1", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "authenticationType": "none", 
+                                "broadcastSsid": true, 
+                                "cwp": true, 
+                                "disabled": true, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN2", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi-guest", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "INTERNET1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "INTERNET2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "INTERNET3", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "edge510": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "broadcastSsid": true, 
+                                "cwp": false, 
+                                "disabled": true, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN1", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "authenticationType": "none", 
+                                "broadcastSsid": true, 
+                                "cwp": true, 
+                                "disabled": true, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN2", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi-guest", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE3", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE4", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "edge5X0": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN3", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN4", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN5", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN6", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN7", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "LAN8", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "broadcastSsid": true, 
+                                "cwp": false, 
+                                "disabled": true, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN1", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "authenticationType": "none", 
+                                "broadcastSsid": true, 
+                                "cwp": true, 
+                                "disabled": true, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "WLAN2", 
+                                "passphrase": "vcsecret", 
+                                "securityMode": "WPA2Personal", 
+                                "ssid": "vc-wifi-guest", 
+                                "type": "wireless", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "edge840": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE3", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE4", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE5", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE6", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP1", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "SFP2", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }, 
+                "virtual": {
+                    "lan": {
+                        "interfaces": [
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE1", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }, 
+                            {
+                                "cwp": false, 
+                                "disabled": false, 
+                                "l2": {
+                                    "MTU": 1500, 
+                                    "autonegotiation": true, 
+                                    "duplex": "FULL", 
+                                    "speed": "100M"
+                                }, 
+                                "name": "GE2", 
+                                "portMode": "access", 
+                                "type": "wired", 
+                                "vlanIds": [
+                                    1
+                                ]
+                            }
+                        ]
+                    }, 
+                    "routedInterfaces": [
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE3", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE4", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "rpf": "SPECIFIC", 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "USER_DEFINED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE5", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE6", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE7", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }, 
+                        {
+                            "addressing": {
+                                "cidrIp": null, 
+                                "cidrPrefix": null, 
+                                "gateway": null, 
+                                "netmask": null, 
+                                "type": "DHCP"
+                            }, 
+                            "disabled": false, 
+                            "encryptOverlay": true, 
+                            "l2": {
+                                "MTU": 1500, 
+                                "autonegotiation": true, 
+                                "duplex": "FULL", 
+                                "speed": "100M"
+                            }, 
+                            "multicast": {
+                                "igmp": {
+                                    "enabled": false, 
+                                    "type": "IGMP_V2"
+                                }, 
+                                "igmpHostQueryIntervalSeconds": null, 
+                                "igmpMaxQueryResponse": null, 
+                                "pim": {
+                                    "enabled": false, 
+                                    "type": "PIM_SM"
+                                }, 
+                                "pimKeepAliveTimerSeconds": null, 
+                                "pimPruneIntervalSeconds": null
+                            }, 
+                            "name": "GE8", 
+                            "natDirect": true, 
+                            "ospf": {
+                                "MTU": 1380, 
+                                "area": 0, 
+                                "authId": 0, 
+                                "authPassphrase": "", 
+                                "authentication": false, 
+                                "cost": 1, 
+                                "deadTimer": 40, 
+                                "enabled": false, 
+                                "helloTimer": 10, 
+                                "inboundRouteLearning": {
+                                    "defaultAction": "LEARN", 
+                                    "filters": []
+                                }, 
+                                "md5Authentication": false, 
+                                "outboundRouteAdvertisement": {
+                                    "defaultAction": "IGNORE", 
+                                    "filters": []
+                                }, 
+                                "passive": false
+                            }, 
+                            "radiusAuthentication": {
+                                "enabled": false, 
+                                "macBypass": []
+                            }, 
+                            "segmentId": -1, 
+                            "underlayAccounting": true, 
+                            "vlanId": null, 
+                            "wanOverlay": "AUTO_DISCOVERED"
+                        }
+                    ]
+                }
+            }, 
+            "ntp": {
+                "enabled": false, 
+                "servers": []
+            }, 
+            "radioSettings": {
+                "country": "auto", 
+                "radios": [
+                    {
+                        "band": "2.4", 
+                        "channel": "auto", 
+                        "isEnabled": true, 
+                        "mode": "n", 
+                        "name": "Radio1", 
+                        "radioId": 0, 
+                        "width": "auto"
+                    }
+                ]
+            }, 
+            "segments": [
+                {
+                    "authentication": {
+                        "ref": "deviceSettings:authentication"
+                    }, 
+                    "bgp": {
+                        "ASN": null, 
+                        "asn": null, 
+                        "connectedRoutes": true, 
+                        "disableASPathCarryOver": false, 
+                        "enabled": false, 
+                        "neighbors": [], 
+                        "networks": [], 
+                        "ospf": {
+                            "enabled": false, 
+                            "metric": 20
+                        }, 
+                        "overlayPrefix": true, 
+                        "propagateUplink": false, 
+                        "routerId": null, 
+                        "uplinkCommunity": null
+                    }, 
+                    "css": {
+                        "enabled": false, 
+                        "provider": {
+                            "ref": "deviceSettings:css:provider"
+                        }
+                    }, 
+                    "dns": {
+                        "backupProvider": {
+                            "ref": "deviceSettings:dns:backupProvider"
+                        }, 
+                        "primaryProvider": {
+                            "ref": "deviceSettings:dns:primaryProvider"
+                        }, 
+                        "privateProviders": {
+                            "ref": "deviceSettings:dns:privateProviders"
+                        }
+                    }, 
+                    "handOffControllers": {
+                        "autoSelect": false, 
+                        "gatewayList": []
+                    }, 
+                    "handOffGateways": {
+                        "autoSelect": false, 
+                        "gatewayList": []
+                    }, 
+                    "multicast": {
+                        "enabled": false, 
+                        "igmpHostQueryIntervalSeconds": null, 
+                        "igmpMaxQueryResponse": null, 
+                        "pimKeepAliveTimerSeconds": null, 
+                        "pimOnWanOverlay": {
+                            "enabled": false, 
+                            "sourceCidrIp": null, 
+                            "sourceInterface": null, 
+                            "type": "SOURCE_IP"
+                        }, 
+                        "pimPruneIntervalSeconds": null, 
+                        "rp": {
+                            "staticGroups": [], 
+                            "type": "STATIC"
+                        }
+                    }, 
+                    "netflow": {
+                        "collectors": [
+                            {
+                                "address": "", 
+                                "port": 4739
+                            }
+                        ], 
+                        "enabled": false, 
+                        "version": 10
+                    }, 
+                    "ntp": {
+                        "enabled": false, 
+                        "servers": []
+                    }, 
+                    "ospf": {
+                        "areas": [], 
+                        "bgp": {
+                            "enabled": false, 
+                            "metric": 20, 
+                            "metricType": "E2"
+                        }, 
+                        "defaultPrefixes": false, 
+                        "defaultRoutes": "NONE", 
+                        "enabled": false
+                    }, 
+                    "segment": {
+                        "name": "Global Segment", 
+                        "segmentId": 0, 
+                        "type": "REGULAR"
+                    }, 
+                    "snmp": {
+                        "port": 161, 
+                        "snmpv2c": {
+                            "allowedIp": [], 
+                            "community": "", 
+                            "enabled": false
+                        }, 
+                        "snmpv3": {
+                            "enabled": false, 
+                            "users": [
+                                {
+                                    "authAlg": "MD5", 
+                                    "encrAlg": "DES", 
+                                    "name": "admin", 
+                                    "passphrase": "velocloud", 
+                                    "privacy": false
+                                }
+                            ]
+                        }
+                    }, 
+                    "vpn": {
+                        "edgeToDataCenter": false, 
+                        "edgeToEdge": false, 
+                        "edgeToEdgeDetail": {
+                            "autoSelectVpnHubs": false, 
+                            "dynamic": {
+                                "enabled": true, 
+                                "isolation": {
+                                    "enabled": false
+                                }, 
+                                "timeout": 180, 
+                                "type": "DIRECT"
+                            }, 
+                            "encryptionProtocol": "GROUP_IPSEC", 
+                            "isolation": {
+                                "enabled": false
+                            }, 
+                            "isolationGroupId": null, 
+                            "isolationGroups": [], 
+                            "useCloudGateway": true, 
+                            "vpnHubs": []
+                        }, 
+                        "edgeToEdgeHub": {
+                            "enabled": false, 
+                            "ref": "deviceSettings:vpn:edgeHub"
+                        }, 
+                        "enabled": false, 
+                        "ref": "deviceSettings:vpn:dataCenter"
+                    }, 
+                    "vqm": {
+                        "collectors": [
+                            {
+                                "address": "", 
+                                "port": 4739
+                            }
+                        ], 
+                        "enabled": false, 
+                        "protocol": "RFC6035"
+                    }
+                }
+            ], 
+            "snmp": {
+                "port": 161, 
+                "snmpv2c": {
+                    "allowedIp": [], 
+                    "community": "", 
+                    "enabled": false
+                }, 
+                "snmpv3": {
+                    "enabled": false, 
+                    "users": [
+                        {
+                            "authAlg": "MD5", 
+                            "encrAlg": "DES", 
+                            "name": "admin", 
+                            "passphrase": "changeme", 
+                            "privacy": false
+                        }
+                    ]
+                }
+            }, 
+            "softwareUpdate": {
+                "window": {
+                    "beginHour": 17, 
+                    "day": 6, 
+                    "endHour": 23
+                }, 
+                "windowed": false
+            }
+            }
+    }
+}

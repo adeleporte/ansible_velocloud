@@ -1,0 +1,168 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_BRONZE
+        hostname: VCE_BRONZE
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '50.8503463'
+        long: '4.351721099999963'
+        eth0:
+          portgroup: 'ls_lan_bronze'
+        eth1:
+          portgroup: 'ls_lan_bronze'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '14.14.14.14'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '14.14.14.1'
+          portgroup: 'ls_internet1_bronze'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '15.15.15.15'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '15.15.15.1'
+          portgroup: 'ls_internet2_bronze'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_SILVER1
+        hostname: VCE_SILVER1
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '48.1351253'
+        long: '11.581980499999986'
+        eth0:
+          portgroup: 'ls_lan_silver1'
+        eth1:
+          portgroup: 'ls_lan_silver1'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '11.11.11.11'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '11.11.11.1'
+          portgroup: 'ls_internet_silver1'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '10.0.3.2'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '10.0.3.1'
+          portgroup: 'ls_mpls_silver1'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_SILVER2
+        hostname: VCE_SILVER2
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '40.4167754'
+        long: '-3.7037901999999576'
+        eth0:
+          portgroup: 'ls_lan_silver2'
+        eth1:
+          portgroup: 'ls_lan_silver2'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '12.12.12.12'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '12.12.12.1'
+          portgroup: 'ls_internet_silver2'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '10.0.4.2'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '10.0.4.1'
+          portgroup: 'ls_mpls_silver2'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_SILVER3
+        hostname: VCE_SILVER3
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '45.4642035'
+        long: '9.189981999999986'
+        eth0:
+          portgroup: 'ls_lan_silver3'
+        eth1:
+          portgroup: 'ls_lan_silver3'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '13.13.13.13'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '13.13.13.1'
+          portgroup: 'ls_internet_silver3'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '10.0.5.2'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '10.0.5.1'
+          portgroup: 'ls_mpls_silver3'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_DC1
+        hostname: VCE_DC1
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '48.856614'
+        long: '2.3522219000000177'
+        eth0:
+          portgroup: 'ls_lan_dc1'
+        eth1:
+          portgroup: 'ls_lan_dc1'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '16.16.16.16'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '16.16.16.1'
+          portgroup: 'ls_internet_dc1'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '10.0.1.2'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '10.0.1.1'
+          portgroup: 'ls_mpls_dc1'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+
+  - import_tasks: 40-DeployVce.yaml
+    vars:
+      vce:
+        instanceid: VCE_DC2
+        hostname: VCE_DC2
+        password: Velocloud123
+        image: 'images/edge-VC_VMDK-x86_64-3.2.0-49-R320-20180409-GA-updatable-ext4.ova'
+        lat: '51.5073509'
+        long: '-0.12775829999998223'
+        eth0:
+          portgroup: 'ls_lan_dc2'
+        eth1:
+          portgroup: 'ls_lan_dc2'
+        eth2:
+          ipAllocationType: 'STATIC'
+          ipAddress: '17.17.17.17'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '17.17.17.1'
+          portgroup: 'ls_internet_dc2'
+        eth3:
+          ipAllocationType: 'STATIC'
+          ipAddress: '10.0.2.2'
+          subnetMask: '255.255.255.0'
+          gatewayAddress: '10.0.2.1'
+          portgroup: 'ls_mpls_dc2'
+        publickeys: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQE/9isaw4ToR5GYLm7g6rgLYIZz2c4UdoL4R2DeMypgW1rHv7P0jL3iqR3L+7bY2HggX2DMvdYwXGlKrtoUWY+WhXKiF0tBvH0rWMYR2XZ+s5UiODifkgJ7NEQrOQOwekoHv7l1MmWxI0XVbFYLZ52aMVaQQOljw9SqyMjCAlF2BnXRfSNW86BAF/KiJVhECbvEfrSBH855OGORlXAHtzyTTEpj0zbTHmAzjLKoqTaXjD9IMf38yqDajMa/XwRUKevK+hkvoWCXaKmY+xXy0Csbf4dkNrJBLrEysfRKwKqkxjXJKKBoQ4b+uTGb+x32DPZCphL2ksEx+8oRb/pCKR adeleporte@adeleporte-m01.vmware.com'
+

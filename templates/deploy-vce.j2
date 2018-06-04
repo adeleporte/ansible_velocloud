@@ -1,0 +1,14 @@
+{
+  "enterpriseId": {{ getenterprise.json[0].id }},
+  "configurationId": 8,
+  "name": "{{ vce.hostname }}",
+  "modelNumber": "virtual",
+  "site": {
+    "contactEmail": "test@test.fr",
+    "contactName": "test",
+    "lat": {{ vce.lat }},
+    "lon": {{ vce.long }}
+  },
+  "haEnabled": false,
+  "endpointPkiMode": "CERTIFICATE_DISABLED"
+}

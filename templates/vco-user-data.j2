@@ -1,0 +1,21 @@
+#cloud-config
+password: {{ vco.password }}
+chpasswd: {expire: False}
+ssh_pwauth: True
+ssh_authorized_keys:
+ - {{ vco.publickeys }}
+vco:
+ super_users:
+  list: |
+   super@velocloud.net: {{ vco.password }}
+  remove_default_users: False
+ system_properties:
+  list: |
+   mail.smtp.port:25
+   mail.smtp.host:smtp.gmail.com
+   mail.smtp.auth.user:velocloudlab@gmail.com
+   mail.smtp.auth.pass:Velocloud123
+   service.maxmind.enable:True
+   service.maxmind.license:WXimG1kO1ywZ
+   service.maxmind.userid:14122
+   network.public.address:{{ vco.eth0.ipAddress }}

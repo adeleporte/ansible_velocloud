@@ -1,0 +1,48 @@
+#cloud-config
+password: "{{ vcg.password }}"
+users:
+  - default
+chpasswd:
+  list: |
+    vcadmin:"{{ vcg.password }}"
+  expire: False
+final_message: "==== Cloud-init completed ===="
+hostname: "{{ vcg.hostname }}"
+write_files:
+  - path: "/var/lib/cloud/scripts/per-boot/config_gateway"
+    permissions: '0777'
+    content: |
+      #!/usr/bin/python
+      import json
+      import commands
+      is_activated = commands.getoutput("/opt/vc/bin/is_activated.py")
+      if "True" in str(is_activated):
+        print "Gateway already activated"
+        exit
+      commands.getoutput("/opt/vc/bin/activate.py -s {{ vco.eth0.ipAddress }} -i {{ gateway.json.activationKey }}")
+
+      ### EDIT GATEWAYD ###
+      with open("/etc/config/gatewayd", "r") as jsonFile:
+        data = json.load(jsonFile)
+        data["global"]["vcmp.interfaces"] = ["eth0"]
+        data["global"]["wan"] = ["eth0"]
+        data["vrf_vlan"]["tag_info"][0]["mode"] = "802.1Q"
+        data["vrf_vlan"]["tag_info"][0]["interface"] = "eth1"
+        data["vrf_vlan"]["tag_info"][0]["c_tag"] = "1100"
+        data["vrf_vlan"]["tag_info"][0]["s_tag"] = "0"
+      with open("/etc/config/gatewayd", "w") as jsonFile:
+        jsonFile.write(json.dumps(data,sort_keys=True,indent=4, separators=(",", ": ")))
+runcmd:
+  - 'echo "[]" > /opt/vc/etc/vc_blocked_subnets.json'
+  - 'sed -iorig "s/wan=\".*/wan=\"eth0 eth0\"/" /etc/config/gatewayd-tunnel'
+  - '/var/lib/cloud/scripts/per-boot/config_gateway'
+  - 'sleep 10'
+  - '/opt/vc/bin/vc_procmon restart'
+power_state:
+ delay: "+1"
+ mode: reboot
+ message: Bye Bye
+ timeout: 30
+ condition: True
+
+

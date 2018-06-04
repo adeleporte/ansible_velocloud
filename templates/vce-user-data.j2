@@ -1,0 +1,6 @@
+#cloud-config
+velocloud:
+  vce:
+    vco: '{{ vco.eth0.ipAddress }}'
+    activation_code: "{{ deployvce.json.activationKey }}"
+    vco_ignore_cert_errors: true

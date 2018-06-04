@@ -1,0 +1,89 @@
+
+# Get the authentication cookie
+- uri:
+    url: https://{{ vco.eth0.ansible }}/portal/rest/login/operatorLogin
+    method: POST
+    body: "{{ lookup('template', 'templates/operator-login.j2') }}"
+    body_format: json
+    validate_certs: no
+    headers:
+      Content-Type: "application/json"
+      Accept-Type: "application/json"
+  register: login
+
+# Get entreprise ID
+- uri:
+    url: https://{{ vco.eth0.ansible }}/portal/rest/network/getNetworkEnterprises
+    method: POST
+    body: "{{ lookup('template', 'templates/get-networkenterprise.j2') }}"
+    body_format: json
+    validate_certs: no
+    headers:
+      Content-Type: "application/json"
+      Accept-Type: "application/json"
+      Cookie: "{{login.set_cookie}}"
+  register: getenterprise
+
+
+# Get entreprise Configuration
+#  - uri:
+#      url: https://{{ vco.eth0.ansible }}/portal/rest/enterprise/getEnterpriseConfigurations
+#      method: POST
+#      body: "{{ lookup('template', 'templates/get-enterpriseconfiguration.j2') }}"
+#      body_format: json
+#      validate_certs: no
+#      headers:
+#        Content-Type: "application/json"
+#        Accept-Type: "application/json"
+#        Cookie: "{{login.set_cookie}}"
+#    register: getconfiguration
+
+# Deploy Edge
+- uri:
+    url: https://{{ vco.eth0.ansible }}/portal/rest/edge/edgeProvision
+    method: POST
+    body: "{{ lookup('template', 'templates/deploy-vce.j2') }}"
+    body_format: json
+    validate_certs: no
+    headers:
+      Content-Type: "application/json"
+      Accept-Type: "application/json"
+      Cookie: "{{login.set_cookie}}"
+  register: deployvce
+  ignore_errors: yes
+
+# Deploy VCE
+- name: deploy_vce
+  vce_deploy_ova:
+    ovftool_path: '{{ ovftool_file_path }}'
+    ova_file: '{{ vce.image }}'
+    vcenter: '{{ VcIPAddress }}'
+    vcenter_user: '{{ VcUser }}'
+    vcenter_passwd: '{{ VcPassword }}'
+    datacenter: '{{ DataCenterName }}'
+    cluster: '{{ ClusterName }}'
+    datastore: '{{ Datastore }}'
+    vmname: '{{ vce.hostname }}'
+    instanceid: '{{ vce.instanceid }}'
+    vcoaddress: '{{ vco.eth0.ipAddress }}'
+    activationcode: "{{ deployvce.json.activationKey }}"
+    hostname: '{{ vce.hostname }}'
+    password: '{{ vce.password }}'
+    publickeys: '{{ vce.publickeys }}'
+    #dns1: '{{ dns1 }}'
+    #dns2: '{{ dns2 }}'
+    eth0portgroup: '{{ vce.eth0.portgroup }}'
+    eth1portgroup: '{{ vce.eth1.portgroup }}'
+    eth2portgroup: '{{ vce.eth2.portgroup }}'
+    eth2ipAllocationType: '{{ vce.eth2.ipAllocationType }}'
+    eth2ipAddress: '{{ vce.eth2.ipAddress }}'
+    eth2subnetMask: '{{ vce.eth2.subnetMask }}'
+    eth2gatewayAddress: '{{ vce.eth2.gatewayAddress }}'
+    eth3portgroup: '{{ vce.eth3.portgroup }}'
+    eth3ipAllocationType: '{{ vce.eth3.ipAllocationType }}'
+    eth3ipAddress: '{{ vce.eth3.ipAddress }}'
+    eth3subnetMask: '{{ vce.eth3.subnetMask }}'
+    eth3gatewayAddress: '{{ vce.eth3.gatewayAddress }}'
+    userdata: "{{ lookup('template', 'templates/vce-user-data.j2') | b64encode }}"
+  register: deploy_vcg
+

@@ -1,0 +1,56 @@
+# Get the authentication cookie
+- uri:
+    url: https://{{ vco.eth0.ansible }}/portal/rest/login/operatorLogin
+    method: POST
+    body: "{{ lookup('template', 'templates/operator-login.j2') }}"
+    body_format: json
+    validate_certs: no
+    headers:
+      Content-Type: "application/json"
+      Accept-Type: "application/json"
+  register: login
+  ignore_errors: yes
+
+# Deploy Gateway
+- uri:
+    url: https://{{ vco.eth0.ansible }}/portal/rest/gateway/gatewayProvision
+    method: POST
+    body: "{{ lookup('template', 'templates/deploy-gateway.j2') }}"
+    body_format: json
+    validate_certs: no
+    headers:
+      Content-Type: "application/json"
+      Accept-Type: "application/json"
+      Cookie: "{{login.set_cookie}}"
+  register: gateway
+  ignore_errors: yes
+
+# Deploy VCG
+- name: deploy_vcg
+  vcg_deploy_ova:
+    ovftool_path: '{{ ovftool_file_path }}'
+    ova_file: '{{ vcg.image }}'
+    vcenter: '{{ VcIPAddress }}'
+    vcenter_user: '{{ VcUser }}'
+    vcenter_passwd: '{{ VcPassword }}'
+    datacenter: '{{ DataCenterName }}'
+    cluster: '{{ ClusterName }}'
+    datastore: '{{ Datastore }}'
+    portgroup_out: '{{ vcg.portgroup }}'
+    portgroup_in: 'null'
+    vmname: '{{ vcg.hostname }}'
+    instanceid: 'test-ansible'
+    vcoaddress: '{{ vco.eth0.ipAddress }}'
+    activationcode: "{{ gateway.json.activationKey }}"
+    hostname: '{{ vcg.hostname }}'
+    password: '{{ vcg.password }}'
+    publickeys: '{{ vcg.publickeys }}'
+    #dns1: '{{ dns1 }}'
+    #dns2: '{{ dns2 }}'
+    eth0ipAllocationType: '{{ vcg.eth0.ipAllocationType }}'
+    eth0ipAddress: '{{ vcg.eth0.ipAddress }}'
+    eth0subnetMask: '{{ vcg.eth0.subnetMask }}'
+    eth0gatewayAddress: '{{ vcg.eth0.gatewayAddress }}'
+    userdata: "{{ lookup('template', 'templates/vcg-user-data.j2') | b64encode }}"
+  register: deploy_vcg
+  when: gateway.status == 200
