@@ -24,7 +24,7 @@
         host: "{{ vco_ip_address }}"
         user: "{{ vco_username }}"
         password: "{{ vco_password }}"
-        enterprise_name: "Vinci"
+        enterprise_name: "My First Customer"
         state: present
       register: enterprise
       tags: enterprise
